@@ -1,0 +1,490 @@
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+
+//Define Variables to Hold each 7-segment value
+//Starts from 6 to 1 as Proteus leftmost 7-Segment is 1
+unsigned char seconds6 = 0;
+unsigned char seconds5 = 0;
+unsigned char minutes4 = 0;
+unsigned char minutes3 = 0;
+unsigned char hours2 = 0;
+unsigned char hours1 = 0;
+unsigned char mode = 0; /*To Hold Decrementing/Incrementing Mode*/
+unsigned char buttonFlag = 1; /*A Flag to prevent level signal execution*/
+unsigned char resetFlag = 1; /*A Flag to prevent level signal execution*/
+
+void GPIO_Init(void)
+{
+
+	DDRA = 0x3F;
+	DDRB = 0x00;
+	DDRC = (DDRC & 0x3F) | 0x0F;
+	DDRD = (DDRD & 0x03) | 0x01;
+
+	PORTA = 0xFF;
+	PORTC = (PORTC & 0xF0) | 0xC0;
+	PORTB = 0xFF;
+	PORTD = 0xD4;
+
+}
+void INT012_Init(void)
+{
+	//Raise Interrupt 1 Flag with rising edge
+	MCUCR |= (1 << ISC01) | (1 << ISC10) | (1 << ISC11); /*(1 << ISC01) for INT0*/
+	//Raise Interrupt 0 Flag with falling edge
+	MCUCR &= ~(1 << ISC00);
+	//Raise Interrupt 2 Flag with falling edge
+	MCUCSR &= ~(1 << ISC2);
+	//Enable INT012 External Interrupt Request
+	GICR |= 0xE0;
+}
+
+void TIMER1_Init(void)
+{
+	TCCR1A = (1 << FOC1A); /*non-PWM mode*/
+	TCCR1B = (1 << WGM12) | (1 << CS12) | (1 << CS10); /*Mode 4 Top=OCR1A N=1024*/
+	TCNT1 = 0;
+	OCR1A = 15625; /*16M/1024 = 15625Hz, 1 Second after 15625 Clock Tick*/
+	TIMSK |= (1 << OCIE1A); /*Enable Timer1A_CTC Mode Interrupt Request*/
+}
+
+//Reset Button PD2
+ISR( INT0_vect)
+{
+	//Assign all Timer variables to start from 0
+	hours1 = hours2 = minutes3 = minutes4 = seconds5 = seconds6 = 0;
+	resetFlag = 0;
+	PORTD &= ~(1 << PD0);
+	GIFR |= (1 << INTF0); /*write logic one to clear the INTF0 Flag bit*/
+
+}
+
+//Pause Button PD3
+ISR( INT1_vect)
+{
+	TCCR1B &= ~(1 << CS12) & ~(1 << CS10); /*Disable Clock source*/
+	GIFR |= (1 << INTF1); /*write logic one to clear the INTF1 Flag bit*/
+}
+//Resume Button PB2
+ISR( INT2_vect)
+{
+	TCCR1B |= (1 << CS12) | (1 << CS10); /*Enable Clock source N=1024*/
+	GIFR |= (1 << INTF2); /*write logic one to clear the INTF2 Flag bit*/
+}
+ISR( TIMER1_COMPA_vect)
+{
+	SREG |= (1 << 7);
+	if (!mode)
+	{
+		resetFlag = 1;
+		if (seconds6 < 9)
+		{
+			seconds6++;
+		}
+		else if (hours1 == 9 && hours2 == 9 && minutes3 == 5 && minutes4 == 9
+				&& seconds5 == 5 && seconds6 == 9)
+		{
+			hours1 = hours2 = minutes3 = minutes4 = seconds5 = seconds6 = 0;
+		}
+		else if (seconds6 == 9)
+		{
+			seconds6 = 0;
+			seconds5++;
+		}
+
+		if (seconds5 == 6)
+		{
+			seconds5 = 0;
+			minutes4++;
+		}
+		if (minutes4 == 10)
+		{
+			minutes4 = 0;
+			minutes3++;
+		}
+		if (minutes3 == 6)
+		{
+			minutes3 = 0;
+			hours2++;
+		}
+		if (hours2 == 10)
+		{
+			hours2 = 0;
+			hours1++;
+		}
+
+	}
+	else
+	{
+		if (seconds6 != 0 || seconds5 != 0 || minutes4 != 0 || minutes3 != 0
+				|| hours2 != 0 || hours1 != 0)
+		{
+			seconds6--;
+		}
+		if (seconds5 != 0 && seconds6 == 255)
+		{
+			seconds5--;
+			seconds6 = 9;
+		}
+		if (minutes4 != 0 && seconds5 == 0 && seconds6 == 255)
+		{
+			minutes4--;
+			seconds5 = 5;
+			seconds6 = 9;
+		}
+		if (minutes3 != 0 && minutes4 == 0 && seconds5 == 0 && seconds6 == 255)
+		{
+			minutes3--;
+			minutes4 = 9;
+			seconds5 = 5;
+			seconds6 = 9;
+		}
+		if (hours2 != 0 && minutes3 == 0 && minutes4 == 0 && seconds5 == 0
+				&& seconds6 == 255)
+		{
+			hours2--;
+			minutes3 = 5;
+			minutes4 = 9;
+			seconds5 = 5;
+			seconds6 = 9;
+		}
+		if (hours1 != 0 && hours2 == 0 && minutes3 == 0 && minutes4 == 0
+				&& seconds5 == 0 && seconds6 == 255)
+		{
+			hours1--;
+			hours2 = 9;
+			minutes3 = 5;
+			minutes4 = 9;
+			seconds5 = 5;
+			seconds6 = 9;
+		}
+		if (hours1 == 0 && hours2 == 0 && minutes3 == 0 && minutes4 == 0
+				&& seconds5 == 0 && seconds6 == 0 && resetFlag)
+		{
+			PORTD |= (1 << PD0);
+		}
+	}
+	TIFR |= (1 << OCF1A); /*Write logic one to clear the OCF1A Flag bit*/
+}
+
+int main(void)
+{
+
+	//Enable Global Interrupt Request
+	SREG |= (1 << 7);
+	GPIO_Init();
+	INT012_Init();
+	TIMER1_Init();
+
+	while (1)
+	{
+
+		if (!(PINB & (1 << PINB7)))
+		{
+			_delay_ms(30);
+			if (!(PINB & (1 << PINB7)))
+			{
+				if (buttonFlag)
+				{
+
+					mode ^= 1;
+					if (!mode)
+					{
+						PORTD &= ~(1 << PD5);
+						PORTD |= (1 << PD4);
+						PORTD &= ~(1 << PD0);
+					}
+					else
+					{
+						PORTD &= ~(1 << PD4);
+						PORTD |= (1 << PD5);
+					}
+					buttonFlag = 0;
+				}
+			}
+		}
+
+		//HOURS 1st Digit
+		else if (!(PINB & (1 << PINB0)))
+		{
+			_delay_ms(30);
+			if (!(PINB & (1 << PINB0)))
+			{
+				if (buttonFlag)
+				{
+					if (hours2 != 0)
+					{
+						hours2--;
+					}
+					else if (hours1 != 0 && hours2 == 0)
+					{
+						hours1--;
+						hours2 = 9;
+					}
+					buttonFlag = 0;
+				}
+			}
+		}
+		else if (!(PINB & (1 << PINB1)))
+		{
+
+			_delay_ms(30);
+			if (!(PINB & (1 << PINB1)))
+			{
+				if (buttonFlag)
+				{
+
+					if (hours2 < 9)
+					{
+						hours2++;
+					}
+					else if (hours1 < 9 && hours2 == 9)
+					{
+						hours2 = 0;
+						hours1++;
+					}
+
+					buttonFlag = 0;
+					resetFlag = 1;
+				}
+			}
+		}
+
+		//HOURS 2nd Digit
+		else if (!(PIND & (1 << PIND6)))
+		{
+
+			_delay_ms(30);
+			if (!(PIND & (1 << PIND6)))
+			{
+				if (buttonFlag)
+				{
+
+					if (hours1 != 0)
+					{
+						hours1--;
+					}
+
+					buttonFlag = 0;
+				}
+			}
+		}
+
+		else if (!(PIND & (1 << PIND7)))
+		{
+
+			_delay_ms(30);
+			if (!(PIND & (1 << PIND7)))
+			{
+				if (buttonFlag)
+				{
+
+					if (hours1 < 9)
+					{
+						hours1++;
+					}
+
+					buttonFlag = 0;
+					resetFlag = 1;
+				}
+			}
+		}
+
+		//MINUTES 1st Digit
+		else if (!(PINB & (1 << PINB3)))
+		{
+			_delay_ms(30);
+			if (!(PINB & (1 << PINB3)))
+			{
+				if (buttonFlag)
+				{
+					if (minutes4 != 0)
+					{
+						minutes4--;
+					}
+					else if (minutes3 != 0 && minutes4 == 0)
+					{
+						minutes3--;
+						minutes4 = 9;
+					}
+					buttonFlag = 0;
+				}
+			}
+		}
+		else if (!(PINB & (1 << PINB4)))
+		{
+			_delay_ms(30);
+			if (!(PINB & (1 << PINB4)))
+			{
+				if (buttonFlag)
+				{
+					if (minutes4 < 9 && minutes3 <= 5)
+					{
+						minutes4++;
+					}
+					else if (minutes3 < 5 && minutes4 == 9)
+					{
+						minutes4 = 0;
+						minutes3++;
+					}
+					buttonFlag = 0;
+					resetFlag = 1;
+				}
+			}
+		}
+
+		//MINUTES 2nd Digit
+		else if (!(PINA & (1 << PINA6)))
+		{
+
+			_delay_ms(30);
+			if (!(PINA & (1 << PINA6)))
+			{
+				if (buttonFlag)
+				{
+
+					if (minutes3 != 0)
+					{
+						minutes3--;
+					}
+
+					buttonFlag = 0;
+				}
+			}
+		}
+
+		else if (!(PINA & (1 << PINA7)))
+		{
+
+			_delay_ms(30);
+			if (!(PINA & (1 << PINA7)))
+			{
+				if (buttonFlag)
+				{
+
+					if (minutes3 < 5)
+					{
+						minutes3++;
+					}
+
+					buttonFlag = 0;
+					resetFlag = 1;
+				}
+			}
+		}
+
+		//SECONDS 1st Digit
+		else if (!(PINB & (1 << PINB5)))
+		{
+			_delay_ms(30);
+			if (!(PINB & (1 << PINB5)))
+			{
+				if (buttonFlag)
+				{
+					if (seconds6 != 0)
+					{
+						seconds6--;
+					}
+					else if (seconds5 != 0 && seconds6 == 0)
+					{
+						seconds5--;
+						seconds6 = 9;
+					}
+					buttonFlag = 0;
+				}
+			}
+		}
+		else if (!(PINB & (1 << PINB6)))
+		{
+			_delay_ms(30);
+			if (!(PINB & (1 << PINB6)))
+			{
+				if (buttonFlag)
+				{
+					if (seconds6 < 9 && seconds5 <= 5)
+					{
+						seconds6++;
+					}
+					else if (seconds5 < 5 && seconds6 == 9)
+					{
+						seconds6 = 0;
+						seconds5++;
+					}
+					buttonFlag = 0;
+					resetFlag = 1;
+				}
+			}
+		}
+
+		//SECONDS 2nd Digit
+		else if (!(PINC & (1 << PINC6)))
+		{
+
+			_delay_ms(30);
+			if (!(PINC & (1 << PINC6)))
+			{
+				if (buttonFlag)
+				{
+
+					if (seconds5 != 0)
+					{
+						seconds5--;
+					}
+
+					buttonFlag = 0;
+				}
+			}
+		}
+
+		else if (!(PINC & (1 << PINC7)))
+		{
+
+			_delay_ms(30);
+			if (!(PINC & (1 << PINC7)))
+			{
+				if (buttonFlag)
+				{
+
+					if (seconds5 < 5)
+					{
+						seconds5++;
+					}
+
+					buttonFlag = 0;
+					resetFlag = 1;
+				}
+			}
+		}
+		else
+		{
+			buttonFlag = 1;
+		}
+
+		PORTA = (PORTA & 0xC0) | (1 << PA5);
+		PORTC = (PORTC & 0xF0) | (seconds6 & 0x0F);
+		_delay_ms(1);
+
+		PORTA = (PORTA & 0xC0) | (1 << PA4);
+		PORTC = (PORTC & 0xF0) | (seconds5 & 0x0F);
+		_delay_ms(1);
+
+		PORTA = (PORTA & 0xC0) | (1 << PA3);
+		PORTC = (PORTC & 0xF0) | (minutes4 & 0x0F);
+		_delay_ms(1);
+
+		PORTA = (PORTA & 0xC0) | (1 << PA2);
+		PORTC = (PORTC & 0xF0) | (minutes3 & 0x0F);
+		_delay_ms(1);
+
+		PORTA = (PORTA & 0xC0) | (1 << PA1);
+		PORTC = (PORTC & 0xF0) | (hours2 & 0x0F);
+		_delay_ms(1);
+
+		PORTA = (PORTA & 0xC0) | (1 << PA0);
+		PORTC = (PORTC & 0xF0) | (hours1 & 0x0F);
+		_delay_ms(1);
+
+	}
+}
+

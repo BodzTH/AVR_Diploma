@@ -1,0 +1,81 @@
+04:41:56 **** Build of configuration Debug for project MCU_Interface1_Mini_Project ****
+make all 
+Building file: ../MCU_Interface1_Mini_Project.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCU_Interface1_Mini_Project.d" -MT"MCU_Interface1_Mini_Project.o" -c -o "MCU_Interface1_Mini_Project.o" "../MCU_Interface1_Mini_Project.c"
+make: *** [MCU_Interface1_Mini_Project.o] Error -1073741502
+"make all" terminated with exit code 2. Build might be incomplete.
+04:45:52 **** Incremental Build of configuration Debug for project MCU_Interface1_Mini_Project ****
+make all 
+Building file: ../MCU_Interface1_Mini_Project.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCU_Interface1_Mini_Project.d" -MT"MCU_Interface1_Mini_Project.o" -c -o "MCU_Interface1_Mini_Project.o" "../MCU_Interface1_Mini_Project.c"
+In file included from ../MCU_Interface1_Mini_Project.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCU_Interface1_Mini_Project.c
+ 
+Building target: MCU_Interface1_Mini_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_Interface1_Mini_Project.map -mmcu=atmega32 -o "MCU_Interface1_Mini_Project.elf"  ./MCU_Interface1_Mini_Project.o   
+Finished building target: MCU_Interface1_Mini_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_Interface1_Mini_Project.elf  >"MCU_Interface1_Mini_Project.lss"
+Finished building: MCU_Interface1_Mini_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_Interface1_Mini_Project.elf  "MCU_Interface1_Mini_Project.hex"
+Finished building: MCU_Interface1_Mini_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_Interface1_Mini_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12046 bytes (36.8% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:13:05 **** Build of configuration Debug for project MCU_Interface1_Mini_Project ****
+make all 
+Building file: ../MCU_Interface1_Mini_Project.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCU_Interface1_Mini_Project.d" -MT"MCU_Interface1_Mini_Project.o" -c -o "MCU_Interface1_Mini_Project.o" "../MCU_Interface1_Mini_Project.c"
+In file included from ../MCU_Interface1_Mini_Project.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCU_Interface1_Mini_Project.c
+ 
+Building target: MCU_Interface1_Mini_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_Interface1_Mini_Project.map -mmcu=atmega32 -o "MCU_Interface1_Mini_Project.elf"  ./MCU_Interface1_Mini_Project.o   
+Finished building target: MCU_Interface1_Mini_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_Interface1_Mini_Project.elf  >"MCU_Interface1_Mini_Project.lss"
+Finished building: MCU_Interface1_Mini_Project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_Interface1_Mini_Project.elf  "MCU_Interface1_Mini_Project.hex"
+Finished building: MCU_Interface1_Mini_Project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_Interface1_Mini_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12054 bytes (36.8% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

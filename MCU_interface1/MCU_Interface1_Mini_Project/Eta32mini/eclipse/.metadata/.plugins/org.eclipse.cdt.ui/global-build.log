@@ -1,0 +1,111 @@
+12:44:12 **** Build of configuration Debug for project MCU1_Mini_Project_Eta32mini ****
+make all 
+Building file: ../MCU1_Mini_Project_Eta32mini.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCU1_Mini_Project_Eta32mini.d" -MT"MCU1_Mini_Project_Eta32mini.o" -c -o "MCU1_Mini_Project_Eta32mini.o" "../MCU1_Mini_Project_Eta32mini.c"
+In file included from ../MCU1_Mini_Project_Eta32mini.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCU1_Mini_Project_Eta32mini.c
+ 
+Building target: MCU1_Mini_Project_Eta32mini.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU1_Mini_Project_Eta32mini.map -mmcu=atmega32 -o "MCU1_Mini_Project_Eta32mini.elf"  ./MCU1_Mini_Project_Eta32mini.o   
+Finished building target: MCU1_Mini_Project_Eta32mini.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU1_Mini_Project_Eta32mini.elf  >"MCU1_Mini_Project_Eta32mini.lss"
+Finished building: MCU1_Mini_Project_Eta32mini.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU1_Mini_Project_Eta32mini.elf  "MCU1_Mini_Project_Eta32mini.hex"
+Finished building: MCU1_Mini_Project_Eta32mini.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU1_Mini_Project_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7466 bytes (22.8% Full)
+(.text + .data + .bootloader)
+
+Data:         13 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:35:33 **** Incremental Build of configuration Debug for project MCU1_Mini_Project_Eta32mini ****
+make all 
+Building file: ../MCU1_Mini_Project_Eta32mini.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCU1_Mini_Project_Eta32mini.d" -MT"MCU1_Mini_Project_Eta32mini.o" -c -o "MCU1_Mini_Project_Eta32mini.o" "../MCU1_Mini_Project_Eta32mini.c"
+In file included from ../MCU1_Mini_Project_Eta32mini.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCU1_Mini_Project_Eta32mini.c
+ 
+Building target: MCU1_Mini_Project_Eta32mini.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU1_Mini_Project_Eta32mini.map -mmcu=atmega32 -o "MCU1_Mini_Project_Eta32mini.elf"  ./MCU1_Mini_Project_Eta32mini.o   
+Finished building target: MCU1_Mini_Project_Eta32mini.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU1_Mini_Project_Eta32mini.elf  >"MCU1_Mini_Project_Eta32mini.lss"
+Finished building: MCU1_Mini_Project_Eta32mini.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU1_Mini_Project_Eta32mini.elf  "MCU1_Mini_Project_Eta32mini.hex"
+Finished building: MCU1_Mini_Project_Eta32mini.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU1_Mini_Project_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7486 bytes (22.8% Full)
+(.text + .data + .bootloader)
+
+Data:         15 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:57:33 **** Incremental Build of configuration Debug for project MCU1_Mini_Project_Eta32mini ****
+make all 
+Building file: ../MCU1_Mini_Project_Eta32mini.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCU1_Mini_Project_Eta32mini.d" -MT"MCU1_Mini_Project_Eta32mini.o" -c -o "MCU1_Mini_Project_Eta32mini.o" "../MCU1_Mini_Project_Eta32mini.c"
+In file included from ../MCU1_Mini_Project_Eta32mini.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCU1_Mini_Project_Eta32mini.c
+ 
+Building target: MCU1_Mini_Project_Eta32mini.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU1_Mini_Project_Eta32mini.map -mmcu=atmega32 -o "MCU1_Mini_Project_Eta32mini.elf"  ./MCU1_Mini_Project_Eta32mini.o   
+Finished building target: MCU1_Mini_Project_Eta32mini.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU1_Mini_Project_Eta32mini.elf  >"MCU1_Mini_Project_Eta32mini.lss"
+Finished building: MCU1_Mini_Project_Eta32mini.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU1_Mini_Project_Eta32mini.elf  "MCU1_Mini_Project_Eta32mini.hex"
+Finished building: MCU1_Mini_Project_Eta32mini.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU1_Mini_Project_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7486 bytes (22.8% Full)
+(.text + .data + .bootloader)
+
+Data:         15 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
