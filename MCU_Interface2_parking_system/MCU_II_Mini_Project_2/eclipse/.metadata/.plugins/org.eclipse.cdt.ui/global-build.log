@@ -1,0 +1,3515 @@
+18:22:34 **** Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../buzzer.c
+ 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../gpio.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../hc_sr_04.c:24:13: error: static declaration of 'Ultrasonic_Trigger' follows non-static declaration
+   24 | static void Ultrasonic_Trigger(void);
+      |             ^~~~~~~~~~~~~~~~~~
+In file included from ../hc_sr_04.c:13:
+../hc_sr_04.h:63:6: note: previous declaration of 'Ultrasonic_Trigger' with type 'void(void)'
+   63 | void Ultrasonic_Trigger(void);
+      |      ^~~~~~~~~~~~~~~~~~
+../hc_sr_04.c: In function 'Ultrasonic_init':
+../hc_sr_04.h:27:33: error: passing argument 1 of 'ICU_init' makes pointer from integer without a cast [-Wint-conversion]
+   27 | #define US_CLOCK_TYPE           F_CPU_8
+      |                                 ^~~~~~~
+      |                                 |
+      |                                 int
+../hc_sr_04.c:40:18: note: in expansion of macro 'US_CLOCK_TYPE'
+   40 |         ICU_init(US_CLOCK_TYPE, RISING);
+      |                  ^~~~~~~~~~~~~
+In file included from ../hc_sr_04.c:14:
+../icu.h:47:38: note: expected 'const ICU_ConfigType *' but argument is of type 'int'
+   47 | void ICU_init(const ICU_ConfigType * Config_Ptr);
+      |               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../hc_sr_04.c:40:9: error: too many arguments to function 'ICU_init'
+   40 |         ICU_init(US_CLOCK_TYPE, RISING);
+      |         ^~~~~~~~
+../icu.h:47:6: note: declared here
+   47 | void ICU_init(const ICU_ConfigType * Config_Ptr);
+      |      ^~~~~~~~
+make: *** [subdir.mk:38: hc_sr_04.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:24:07 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+In file included from ../hc_sr_04.c:13:
+../hc_sr_04.c: In function 'Ultrasonic_init':
+../hc_sr_04.h:27:25: error: passing argument 1 of 'ICU_init' makes pointer from integer without a cast [-Wint-conversion]
+   27 | #define US_CLOCK_TYPE   F_CPU_8
+      |                         ^~~~~~~
+      |                         |
+      |                         int
+../hc_sr_04.c:40:18: note: in expansion of macro 'US_CLOCK_TYPE'
+   40 |         ICU_init(US_CLOCK_TYPE, RISING);
+      |                  ^~~~~~~~~~~~~
+In file included from ../hc_sr_04.c:14:
+../icu.h:47:38: note: expected 'const ICU_ConfigType *' but argument is of type 'int'
+   47 | void ICU_init(const ICU_ConfigType * Config_Ptr);
+      |               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../hc_sr_04.c:40:9: error: too many arguments to function 'ICU_init'
+   40 |         ICU_init(US_CLOCK_TYPE, RISING);
+      |         ^~~~~~~~
+../icu.h:47:6: note: declared here
+   47 | void ICU_init(const ICU_ConfigType * Config_Ptr);
+      |      ^~~~~~~~
+make: *** [subdir.mk:38: hc_sr_04.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:24:58 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../hc_sr_04.c: In function 'Ultrasonic_init':
+../hc_sr_04.c:40:18: error: passing argument 1 of 'ICU_init' makes pointer from integer without a cast [-Wint-conversion]
+   40 |         ICU_init(F_CPU_8, RISING);
+      |                  ^~~~~~~
+      |                  |
+      |                  int
+In file included from ../hc_sr_04.c:14:
+../icu.h:47:38: note: expected 'const ICU_ConfigType *' but argument is of type 'int'
+   47 | void ICU_init(const ICU_ConfigType * Config_Ptr);
+      |               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../hc_sr_04.c:40:9: error: too many arguments to function 'ICU_init'
+   40 |         ICU_init(F_CPU_8, RISING);
+      |         ^~~~~~~~
+../icu.h:47:6: note: declared here
+   47 | void ICU_init(const ICU_ConfigType * Config_Ptr);
+      |      ^~~~~~~~
+make: *** [subdir.mk:38: hc_sr_04.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:28:25 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../car_parking_system.c: In function 'main':
+../car_parking_system.c:21:9: error: unknown type name 'ICU_ConfigType'
+   21 |         ICU_ConfigType ICU_Configurations =
+      |         ^~~~~~~~~~~~~~
+../car_parking_system.c:22:11: error: 'F_CPU_CLOCK' undeclared (first use in this function)
+   22 |         { F_CPU_CLOCK, RISING };
+      |           ^~~~~~~~~~~
+../car_parking_system.c:22:11: note: each undeclared identifier is reported only once for each function it appears in
+../car_parking_system.c:22:24: error: 'RISING' undeclared (first use in this function)
+   22 |         { F_CPU_CLOCK, RISING };
+      |                        ^~~~~~
+../car_parking_system.c:22:24: warning: excess elements in scalar initializer
+../car_parking_system.c:22:24: note: (near initialization for 'ICU_Configurations')
+../car_parking_system.c:21:24: warning: unused variable 'ICU_Configurations' [-Wunused-variable]
+   21 |         ICU_ConfigType ICU_Configurations =
+      |                        ^~~~~~~~~~~~~~~~~~
+make: *** [subdir.mk:38: car_parking_system.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:28:34 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building file: ../icu.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"icu.d" -MT"icu.o" -c -o "icu.o" "../icu.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+../icu.c: In function '__vector_6':
+../icu.c:34:18: warning: function with qualified void return type called
+   34 |                 (*g_callBackPtr)(); /* another method to call the function using pointer to function g_callBackPtr(); */
+      |                 ~^~~~~~~~~~~~~~~
+../icu.c: In function 'ICU_setCallBack':
+../icu.c:82:9: warning: function return types not compatible due to 'volatile'
+   82 |         g_callBackPtr = a_ptr;
+      |         ^~~~~~~~~~~~~
+Finished building: ../icu.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209:4: error: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+  209 |    itoa(data,buff,10); /* Use itoa C function to convert the data to its corresponding ASCII value, 10 for decimal */
+      |    ^~~~
+make: *** [subdir.mk:38: lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:29:20 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../lcd.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../led.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10358 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:31:47 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../car_parking_system.c: In function 'main':
+../car_parking_system.c:26:16: warning: unused variable 'distance' [-Wunused-variable]
+   26 |         uint16 distance;
+      |                ^~~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9888 bytes (30.2% Full)
+(.text + .data + .bootloader)
+
+Data:         22 bytes (1.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:32:22 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../car_parking_system.c: In function 'main':
+../car_parking_system.c:26:16: warning: unused variable 'distance' [-Wunused-variable]
+   26 |         uint16 distance;
+      |                ^~~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9888 bytes (30.2% Full)
+(.text + .data + .bootloader)
+
+Data:         22 bytes (1.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:33:10 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9888 bytes (30.2% Full)
+(.text + .data + .bootloader)
+
+Data:         22 bytes (1.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:35:36 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9888 bytes (30.2% Full)
+(.text + .data + .bootloader)
+
+Data:         22 bytes (1.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:36:13 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9870 bytes (30.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:14 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9866 bytes (30.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:38:58 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10312 bytes (31.5% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:39:51 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10326 bytes (31.5% Full)
+(.text + .data + .bootloader)
+
+Data:         24 bytes (1.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:41:36 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../led.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10326 bytes (31.5% Full)
+(.text + .data + .bootloader)
+
+Data:         24 bytes (1.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:43:33 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../lcd.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10346 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:45:26 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209:4: error: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+  209 |    itoa(data,buff,10); /* Use itoa C function to convert the data to its corresponding ASCII value, 10 for decimal */
+      |    ^~~~
+make: *** [subdir.mk:38: lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:45:52 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../lcd.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10346 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:46:09 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10346 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:46:25 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10346 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:46:47 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10346 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:47:51 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10332 bytes (31.5% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:48:26 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10346 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:19:19 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10848 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:20:49 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10838 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:22:04 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10840 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:22:53 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10838 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:23:22 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10838 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:24:02 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10840 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:24:26 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10840 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:24:54 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:16:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10840 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:26:16 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10862 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:26:41 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10860 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:27:58 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10786 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:29:02 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10786 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:29:41 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10764 bytes (32.8% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:32:32 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10764 bytes (32.8% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:35:07 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9272 bytes (28.3% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:41:15 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+../hc_sr_04.c: In function 'Ultrasonic_Trigger':
+../hc_sr_04.c:58:9: error: implicit declaration of function '_delay_us' [-Wimplicit-function-declaration]
+   58 |         _delay_us(10);
+      |         ^~~~~~~~~
+make: *** [subdir.mk:38: hc_sr_04.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:46:56 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10010 bytes (30.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:49:24 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10010 bytes (30.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:54:35 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10520 bytes (32.1% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:55:08 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10514 bytes (32.1% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:56:36 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10490 bytes (32.0% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:57:24 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10490 bytes (32.0% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:00:08 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../hc_sr_04.c: In function 'Ultrasonic_readDistance':
+../hc_sr_04.c:77:9: error: 'return' with no value, in function returning non-void [-Wreturn-mismatch]
+   77 |         return;
+      |         ^~~~~~
+../hc_sr_04.c:73:8: note: declared here
+   73 | uint16 Ultrasonic_readDistance(void)
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+../hc_sr_04.c:76:16: warning: unused variable 'total_dist' [-Wunused-variable]
+   76 |         uint16 total_dist = ICU_getInputCaptureValue();
+      |                ^~~~~~~~~~
+make: *** [subdir.mk:38: hc_sr_04.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:00:47 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9984 bytes (30.5% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:02:07 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10474 bytes (32.0% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:03:05 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10480 bytes (32.0% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:03:59 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10480 bytes (32.0% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:13:12 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../hc_sr_04.c: In function 'Ultrasonic_readDistance':
+../hc_sr_04.c:82:1: warning: control reaches end of non-void function [-Wreturn-type]
+   82 | }
+      | ^
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9926 bytes (30.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:18:23 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10286 bytes (31.4% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:19:45 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10574 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:20:29 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10576 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:21:15 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10576 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:22:25 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10598 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:23:04 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10598 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:23:34 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10598 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:24:16 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10598 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:24:48 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10598 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:25:30 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10598 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:26:04 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10830 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:26:20 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10830 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:26:36 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10830 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:30:37 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10574 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:31:35 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11084 bytes (33.8% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:31:52 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10830 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:37:59 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10826 bytes (33.0% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:54:07 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10826 bytes (33.0% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:57:05 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10870 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:58:16 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../lcd.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10870 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:59:45 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209:4: error: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+  209 |    itoa(data,buff,10); /* Use itoa C function to convert the data to its corresponding ASCII value, 10 for decimal */
+      |    ^~~~
+make: *** [subdir.mk:38: lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:00:03 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../lcd.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10870 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:08:51 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../lcd.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10870 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:09:25 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10862 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:15:42 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:14:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../lcd.c:16:10: fatal error: LCD.h: No such file or directory
+   16 | #include "LCD.h"
+      |          ^~~~~~~
+compilation terminated.
+make: *** [subdir.mk:38: lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:16:06 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:14:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+../lcd.c:16:10: fatal error: LCD.h: No such file or directory
+   16 | #include "LCD.h"
+      |          ^~~~~~~
+compilation terminated.
+make: *** [subdir.mk:38: lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:16:59 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:14:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../lcd.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10862 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:18:34 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../buzzer.c
+ 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../gpio.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../lcd.c:13:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../lcd.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+Finished building: ../led.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10834 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:19:07 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+../hc_sr_04.c:16:10: fatal error: atmega32_memory_mapped_reg.h: No such file or directory
+   16 | #include "atmega32_memory_mapped_reg.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [subdir.mk:38: hc_sr_04.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:19:17 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+../hc_sr_04.c:16:10: fatal error: atmega32_memory_mapped_reg.h: No such file or directory
+   16 | #include "atmega32_memory_mapped_reg.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [subdir.mk:38: hc_sr_04.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:19:39 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../hc_sr_04.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../hc_sr_04.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10842 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:22:10 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10864 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:22:39 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10864 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:23:14 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10864 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:20 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10880 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:51 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+avr-gcc: warning: switch '-gstabs' is no longer supported
+In file included from ../car_parking_system.c:17:
+/usr/avr/include/util/delay.h:111:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+  111 | # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+      |   ^~~~~~~
+Finished building: ../car_parking_system.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf" ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10898 bytes (33.3% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:31:32 **** Incremental Build of configuration Debug for project MCU_II_Mini_Project_2 ****
+make all 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../car_parking_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"car_parking_system.d" -MT"car_parking_system.o" -c -o "car_parking_system.o" "../car_parking_system.c"
+In file included from ../car_parking_system.c:17:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../car_parking_system.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../hc_sr_04.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"hc_sr_04.d" -MT"hc_sr_04.o" -c -o "hc_sr_04.o" "../hc_sr_04.c"
+In file included from ../hc_sr_04.c:17:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../hc_sr_04.c
+ 
+Building file: ../icu.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"icu.d" -MT"icu.o" -c -o "icu.o" "../icu.c"
+../icu.c: In function 'ICU_setCallBack':
+../icu.c:82: warning: function return types not compatible due to 'volatile'
+Finished building: ../icu.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../lcd.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+Finished building: ../led.c
+ 
+Building target: MCU_II_Mini_Project_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MCU_II_Mini_Project_2.map -mmcu=atmega32 -o "MCU_II_Mini_Project_2.elf"  ./buzzer.o ./car_parking_system.o ./gpio.o ./hc_sr_04.o ./icu.o ./lcd.o ./led.o   
+Finished building target: MCU_II_Mini_Project_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MCU_II_Mini_Project_2.elf  >"MCU_II_Mini_Project_2.lss"
+Finished building: MCU_II_Mini_Project_2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MCU_II_Mini_Project_2.elf  "MCU_II_Mini_Project_2.hex"
+Finished building: MCU_II_Mini_Project_2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MCU_II_Mini_Project_2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12786 bytes (39.0% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

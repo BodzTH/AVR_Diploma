@@ -1,0 +1,314 @@
+/*
+ -----------------------------------------------------------
+ * Module: GPIO
+ *
+ * File: gpio.c
+ *
+ * Description: GPIO Driver Source File
+ *
+ * Author: Bodz
+ -----------------------------------------------------------
+ */
+
+#include "gpio.h"
+#include "atmega32_memory_mapped_reg.h" /* To use the IO Ports Registers */
+#include "common_macros.h" /* To use the macros like SET_BIT */
+/*----------------------------------------------------------*/
+
+/* Setup PIN Direction Function
+ *
+ * Description: Configures a specific PIN direction as INPUT/OUTPUT in a specific PORT
+ * Does Not handle the request of incorrect inputs
+ *
+ * Pram1: ID number of PORT
+ * Pram2: ID number for PIN
+ * Pram3: PIN direction as GPIO_PinDirectionType enum type PIN_INPUT/PIN_OUTPUT
+ *
+ * Return: void
+ *
+ */
+void GPIO_setupPinDirection(uint8 port_num, uint8 pin_num,
+		GPIO_PinDirectionType direction)
+{
+	/*Check for incorrect input PORTS/PINS*/
+	if ((port_num >= NUM_OF_PORTS) || (pin_num >= NUM_OF_PINS_PER_PORT))
+	{
+		return;
+	}
+	switch (port_num)
+	/*Execute the case of the passed PORT number*/
+	{
+	case PORTA_ID:
+		if (direction) /*Check if the direction is PIN_OUTPUT*/
+		{
+
+			SET_BIT(DDRA, pin_num);
+		}
+		else /*Clear if not PIN_OUTPUT which is PIN_INPUT*/
+		{
+			CLEAR_BIT(DDRA, pin_num);
+		}
+		break;
+	case PORTB_ID:
+		if (direction) /*Check if the direction is PIN_OUTPUT*/
+		{
+
+			SET_BIT(DDRB, pin_num);
+		}
+		else /*Clear if not PIN_OUTPUT which is PIN_INPUT*/
+		{
+			CLEAR_BIT(DDRB, pin_num);
+		}
+		break;
+	case PORTC_ID:
+		if (direction) /*Check if the direction is PIN_OUTPUT*/
+		{
+
+			SET_BIT(DDRC, pin_num);
+		}
+		else /*Clear if not PIN_OUTPUT which is PIN_INPUT*/
+		{
+			CLEAR_BIT(DDRC, pin_num);
+		}
+		break;
+	case PORTD_ID:
+		if (direction) /*Check if the direction is PIN_OUTPUT*/
+		{
+
+			SET_BIT(DDRD, pin_num);
+		}
+		else /*Clear if not PIN_OUTPUT which is PIN_INPUT*/
+		{
+			CLEAR_BIT(DDRD, pin_num);
+		}
+		break;
+	default:
+		/*Do Nothing*/
+	}
+
+}
+
+/*----------------------------------------------------------*/
+
+/* Write PIN Value Function
+ *
+ * Description: Writing a 0/1 to a specific PIN in a specific PORT
+ * Does Not handle the request of incorrect inputs
+ * If the PIN direction configured as input, then will enable/disable internal pull-up resistor of that PIN
+ *
+ * Pram1: ID number of PORT
+ * Pram2: ID number for PIN
+ * Pram3: Value to be written as LOGIC_HIGH/LOGIC_LOW
+ *
+ * Return: void
+ *
+ */
+void GPIO_writePin(uint8 port_num, uint8 pin_num, uint8 value)
+{
+	if ((port_num >= NUM_OF_PORTS) || (pin_num >= NUM_OF_PINS_PER_PORT))
+	{
+		return;
+	}
+	switch (port_num)
+	/*Execute the case of the passed PORT number*/
+	{
+	case PORTA_ID:
+		if (value)
+		{
+
+			SET_BIT(PORTA, pin_num);
+		}
+		else
+		{
+			CLEAR_BIT(PORTA, pin_num);
+		}
+		break;
+	case PORTB_ID:
+		if (value)
+		{
+
+			SET_BIT(PORTB, pin_num);
+		}
+		else
+		{
+			CLEAR_BIT(PORTB, pin_num);
+		}
+		break;
+	case PORTC_ID:
+		if (value)
+		{
+
+			SET_BIT(PORTC, pin_num);
+		}
+		else
+		{
+			CLEAR_BIT(PORTC, pin_num);
+		}
+		break;
+	case PORTD_ID:
+		if (value)
+		{
+
+			SET_BIT(PORTD, pin_num);
+		}
+		else
+		{
+			CLEAR_BIT(PORTD, pin_num);
+		}
+		break;
+	default:
+		/*Do Nothing*/
+	}
+
+}
+
+/*----------------------------------------------------------*/
+
+/* Read PIN Value Function
+ *
+ * Description: Reading a specific PIN value from a specific PORT
+ * Does Not handle the request of incorrect inputs, returns LOGIC_LOW instead
+ *
+ * Pram1: ID number of PORT
+ * Pram2: ID number for PIN
+ *
+ * Return: LOGIC_HIGH/LOGIC_LOW as unsigned 8 bit integer
+ *
+ */
+uint8 GPIO_readPin(uint8 port_num, uint8 pin_num)
+{
+	if ((port_num >= NUM_OF_PORTS) || (pin_num >= NUM_OF_PINS_PER_PORT))
+	{
+		return LOGIC_LOW;
+	}
+	switch (port_num)
+	/*Execute the case of the passed PORT number*/
+	{
+	case PORTA_ID:
+		return GET_BIT(PINA, pin_num); /*Return LOGIC_HIGH/LOGIC_LOW based on the specific PIN value in PORTA*/
+	case PORTB_ID:
+		return GET_BIT(PINB, pin_num); /*Return LOGIC_HIGH/LOGIC_LOW based on the specific PIN value in PORTB*/
+	case PORTC_ID:
+		return GET_BIT(PINC, pin_num); /*Return LOGIC_HIGH/LOGIC_LOW based on the specific PIN value in PORTC*/
+	case PORTD_ID:
+		return GET_BIT(PIND, pin_num); /*Return LOGIC_HIGH/LOGIC_LOW based on the specific PIN value in PORTD*/
+	default:
+		return LOGIC_LOW; /*Return LOGIC_LOW if PORT ID not handled*/
+	}
+}
+
+/*----------------------------------------------------------*/
+
+/* Setup PORT Direction Function
+ *
+ * Description: Configures all PINs direction as INPUT/OUTPUT in a specific PORT
+ * Does Not handle the request of incorrect inputs
+ *
+ * Pram1: ID number of PORT
+ * Pram2: PIN direction as GPIO_PortDirectionType enum type PORT_INPUT/PORT_OUTPUT
+ *
+ * Return: void
+ *
+ */
+void GPIO_setupPortDirection(uint8 port_num, GPIO_PortDirectionType direction)
+{
+	if (port_num >= NUM_OF_PORTS)
+	{
+		return;
+	}
+	switch (port_num)
+	{
+	case PORTA_ID:
+		DDRA = direction;
+		break;
+	case PORTB_ID:
+		DDRB = direction;
+		break;
+	case PORTC_ID:
+		DDRC = direction;
+		break;
+	case PORTD_ID:
+		DDRD = direction;
+		break;
+	default:
+		/*Do Nothing*/
+	}
+
+}
+
+/*----------------------------------------------------------*/
+
+/* Write PORT Value Function
+ *
+ * Description: Writing to all PINs in a specific PORT
+ * Does Not handle the request of incorrect inputs
+ * If a PIN direction in the PORT configured as input, then will enable/disable internal pull-up resistor of this PIN
+ *
+ * Pram1: ID number of PORT
+ * Pram3: unit8 Value to be written (ex. 0xF0)
+ *
+ * Return: void
+ *
+ */
+void GPIO_writePort(uint8 port_num, uint8 value)
+{
+
+	if (port_num >= NUM_OF_PORTS)
+	{
+		return;
+	}
+	switch (port_num)
+	{
+	case PORTA_ID:
+		PORTA = value;
+		break;
+	case PORTB_ID:
+		PORTB = value;
+		break;
+	case PORTC_ID:
+		PORTC = value;
+		break;
+	case PORTD_ID:
+		PORTD = value;
+		break;
+	default:
+		/*Do Nothing*/
+	}
+}
+
+/*----------------------------------------------------------*/
+
+/* Read PORT Value Function
+ *
+ * Description: Reading a specific PORT register value
+ * Does Not handle the request of incorrect inputs, returns LOGIC_LOW instead
+ *
+ * Pram1: ID number of PORT
+ *
+ * Return: Value of PORT register as unsigned 8 bit integer
+ *
+ */
+uint8 GPIO_readPort(uint8 port_num)
+{
+
+	if (port_num >= NUM_OF_PORTS)
+	{
+		return LOGIC_LOW;
+	}
+	switch (port_num)
+	/*Execute the case of the passed PORT number*/
+	{
+	case PORTA_ID:
+		return PORTA; /*Return PORTA register 8-bit value*/
+	case PORTB_ID:
+		return PORTB; /*Return PORTB register 8-bit value*/
+	case PORTC_ID:
+		return PORTC; /*Return PORTC register 8-bit value*/
+	case PORTD_ID:
+		return PORTD; /*Return PORTD register 8-bit value*/
+	default:
+		return LOGIC_LOW; /*Return LOGIC_LOW if PORT ID not handled*/
+	}
+}
+
+/*----------------------------------------------------------*/

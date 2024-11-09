@@ -1,0 +1,161 @@
+/*
+ -----------------------------------------------------------
+ * Module: GPIO
+ *
+ * File: gpio.h
+ *
+ * Description: GPIO Driver Header File
+ *
+ * Author: Bodz
+ -----------------------------------------------------------
+ */
+
+#ifndef GPIO_H_
+#define GPIO_H_
+
+#include "std_types.h"
+
+/*
+ -------------------------------------------------------------
+ | 	 	 	 	 	 	 Definitions						|
+ -------------------------------------------------------------
+ */
+
+#define NUM_OF_PORTS           4
+#define NUM_OF_PINS_PER_PORT   8
+
+#define PORTA_ID               0
+#define PORTB_ID               1
+#define PORTC_ID               2
+#define PORTD_ID               3
+/*Add more ports macro as number of PORTs increases, also handle the PORT case in gpio.c file*/
+
+#define PIN0_ID                0
+#define PIN1_ID                1
+#define PIN2_ID                2
+#define PIN3_ID                3
+#define PIN4_ID                4
+#define PIN5_ID                5
+#define PIN6_ID                6
+#define PIN7_ID                7
+/*Add more pins macro as number of PINs increases, also handle the PIN case in gpio.c file*/
+
+/*
+ -------------------------------------------------------------
+ | 	 	 	 	 	 	 Types Declaration					 |
+ -------------------------------------------------------------
+ */
+
+typedef enum
+{
+	PIN_INPUT, PIN_OUTPUT
+} GPIO_PinDirectionType;
+
+typedef enum
+{
+	PORT_INPUT, PORT_OUTPUT = 0xFF
+} GPIO_PortDirectionType;
+
+/*
+ -------------------------------------------------------------
+ | 	 	 	 	 	 	 Functions Prototypes				 |
+ -------------------------------------------------------------
+ */
+
+/*----------------------------------------------------------*/
+
+/* Setup PIN Direction Function
+ *
+ * Description: Configures a specific PIN direction as INPUT/OUTPUT in a specific PORT
+ * Does Not handle the request of incorrect inputs
+ *
+ * Pram1: ID number of PORT
+ * Pram2: ID number for PIN
+ * Pram3: PIN direction as GPIO_PinDirectionType enum type PIN_INPUT/PIN_OUTPUT
+ *
+ * Return: void
+ *
+ */
+void GPIO_setupPinDirection(uint8 port_num, uint8 pin_num,
+		GPIO_PinDirectionType direction);
+
+/*----------------------------------------------------------*/
+
+/* Write PIN Value Function
+ *
+ * Description: Writing a 0/1 to a specific PIN in a specific PORT
+ * Does Not handle the request of incorrect inputs
+ * If the PIN direction configured as input, then will enable/disable internal pull-up resistor of that PIN
+ *
+ * Pram1: ID number of PORT
+ * Pram2: ID number for PIN
+ * Pram3: Value to be written as LOGIC_HIGH/LOGIC_LOW
+ *
+ * Return: void
+ *
+ */
+void GPIO_writePin(uint8 port_num, uint8 pin_num, uint8 value);
+
+/*----------------------------------------------------------*/
+
+/* Read PIN Value Function
+ *
+ * Description: Reading a specific PIN value from a specific PORT
+ * Does Not handle the request of incorrect inputs, returns LOGIC_LOW instead
+ *
+ * Pram1: ID number of PORT
+ * Pram2: ID number for PIN
+ *
+ * Return: LOGIC_HIGH/LOGIC_LOW as unsigned 8 bit integer
+ *
+ */
+uint8 GPIO_readPin(uint8 port_num, uint8 pin_num);
+
+/*----------------------------------------------------------*/
+
+/* Setup PORT Direction Function
+ *
+ * Description: Configures all PINs direction as INPUT/OUTPUT in a specific PORT
+ * Does Not handle the request of incorrect inputs
+ *
+ * Pram1: ID number of PORT
+ * Pram2: PIN direction as GPIO_PortDirectionType enum type PORT_INPUT/PORT_OUTPUT
+ *
+ * Return: void
+ *
+ */
+void GPIO_setupPortDirection(uint8 port_num, GPIO_PortDirectionType direction);
+
+/*----------------------------------------------------------*/
+
+/* Write PORT Value Function
+ *
+ * Description: Writing to all PINs in a specific PORT
+ * Does Not handle the request of incorrect inputs
+ * If a PIN direction in the PORT configured as input, then will enable/disable internal pull-up resistor of this PIN
+ *
+ * Pram1: ID number of PORT
+ * Pram3: unit8 Value to be written (ex. 0xF0)
+ *
+ * Return: void
+ *
+ */
+void GPIO_writePort(uint8 port_num, uint8 value);
+
+/*----------------------------------------------------------*/
+
+/* Read PORT Value Function
+ *
+ * Description: Reading a specific PORT register value
+ * Does Not handle the request of incorrect inputs, returns LOGIC_LOW instead
+ *
+ * Pram1: ID number of PORT
+ *
+ * Return: Value of PORT register as unsigned 8 bit integer
+ *
+ */
+uint8 GPIO_readPort(uint8 port_num);
+
+/*----------------------------------------------------------*/
+
+#endif /* GPIO_H_ */
